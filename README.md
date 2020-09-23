@@ -1,9 +1,7 @@
 # **Zombies**
-
 ---
 
 ## Beskrivning
-
 > Det finns 100 hus i en by där det bor en person i varje hus. En dag kommer en zombie och hälsar på i ett slumpmässigt utvalt hus. Efter besöket är husets ägare smittad och vi har alltså två zombies som går nästa runda.
 > Kör så många rundor som krävs tills alla husägare har blivit zombies. Zombies har inget minne av vilket hus de redan varit i utan kan även gå till tomma hus.
 > Visuellt ska det visas med enkla medel om vilka hus som är friska och infekterade under körning (kanske med lite delay mellan varje runda för att man ska hinna se förändringar).
@@ -11,7 +9,6 @@
 > Programmet ska köra tio gånger och presentera hur många rundor det tog innan alla blev zombies och sedan visa ett snittantal för dessa rundor.
 
 ## Tankegångar
-
 > För att få till en trevlig och bra grafisk presentation av körningen på filen så tänkte jag det var smidigt med html, css och js, eftersom man får upp ett resultat på webbläsaren direkt.
 > Jag inkluderade Bootstrap, jQuery och Font Awesome för att slippa skapa ett eget flex-system. Allt finns ju klappat och klart i Bootstrap redan, bara att använda rätt klasser.
 > Font Awesome är mycket bra om man vill hitta enkla ikoner som går att färglägga i angivna färger. Det är både husen och gubbarna i navbar som är från FA.
@@ -21,11 +18,9 @@
 > Det svåraste med JavaScript-delen var hur man skulle spara varje körning och ange ett snitt efter det. Men jag löste det med local storage. Det är en fungerande lösning men jag hade velat hitta en bättre lösning än så.
 
 ## Internet
-
-> The Internet address to this site is [https://gracious-kilby-79be6f.netlify.app/](https://gracious-kilby-79be6f.netlify.app/) . It is deployed on Netlify, therefore the strange domain name.
+> Internet-adressen till sidan ligger på [https://gracious-kilby-79be6f.netlify.app/](https://gracious-kilby-79be6f.netlify.app/) . Den är utlagd via Netlify, därav den märkliga adressen.
 
 ## Utdrag ur programkoden
-
 > Här kommer ett utdrag ur programkoden. Det är från funktionen när man har klickat på 'update'-knappen.
 
 ```js
