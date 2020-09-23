@@ -20,9 +20,9 @@
 > I JS-filerna har jag använt en del jQuery vilket ofta ger korta och beskrivande funktioner, till exempel då man trycker på några av menyknapparna längst upp.
 > Det svåraste med JavaScript-delen var hur man skulle spara varje körning och ange ett snitt efter det. Men jag löste det med local storage. Det är en fungerande lösning men jag hade velat hitta en bättre lösning än så.
 
-## Tankegångar
+## Internet
 
-> The Internet address to this site is [https://anst9000.xyz/panel](https://anst9000.xyz/panel) . This folder is protected with a password to decrease the possibilities to enter the API trying to change the content of it. See under login to Admin. When entering the site for the first time you have to create a username and a password which is hashed and stored in a datatbase. After doing this you can enter the Admin pages and there is full CRUD functionality for this REST API.
+> The Internet address to this site is [https://gracious-kilby-79be6f.netlify.app/](https://gracious-kilby-79be6f.netlify.app/) . It is deployed on Netlify, therefore the strange domain name.
 
 ## Utdrag ur programkoden
 
