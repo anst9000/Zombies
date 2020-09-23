@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Gloria+Hallelujah&display=swap&family=Ranchers&display=swap');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  background-color: #F4E285;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+/* .container {
+
+} */
+
+.zombie {
+	font-size: 3rem;
+	color: #225560;
+}
+
+.house {
+	font-size: 1.75rem;
+}
+
+.healthy {
+	color: green;
+}
+
+.infected {
+	color: red;
+}
+
+.btn {
+  min-width: 8em;
+  margin: 5px 10px;
+  padding: 3px;
+}
+
+#update {
+	background: limegreen;
+}
+
+#reload {
+	background: firebrick;
+}
+
+.dark-mode {
+	background-color: #333333;
+	color: #eeeeee;
+}
+
+.dark-mode.healthy {
+	color: #a1a04c;
+}
+
+.dark-mode.infected {
+	color: red;
+}
+
+
+.info {
+  font-family: 'Gloria Hallelujah', cursive;
+  width: 1000px;
+  font-size: 1.4em;
+}

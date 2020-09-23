@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src='https://kit.fontawesome.com/6ad2b68ccb.js'></script>
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'
+    integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Zombies</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light py-1" style="background-color: #F0803C;">
+    <button class="btn btn-dark" id="changeMode">Change Mode</button>
+    <i class="zombie fas fa-blind"></i>
+    <button class="btn btn-success" id="update">Update</button>
+    <h2 id="header-text">
+      Zombies
+    </h2>
+    <button class="btn btn-danger" id="reload">Reload</button>
+    <i class="zombie fas fa-blind"></i>
+    <a href="about.html" class="btn btn-info" id="about">About</a>
+  </nav>
+
+  <div class="container mt-2 mx-auto">
+    <div class="row my-1">
+      <div id="epidemics" class="col-sm-3 offset-sm-2"></div>
+      <div id="rounds-per-epidemic" class="col-sm-3"></div>
+      <div id="rounds" class="col-sm-3"></div>
+    </div>
+    <!-- <h2 class="d-flex justify-content-center status-text" id="header-text">1 zombie</h2> -->
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="row my-2">
+      <div class="col-sm-1"></div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="healthy house mr-1 col-sm-1"><i class="fa fa-home" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <footer id="sticky-footer" class="py-4 bg-dark">
+    <div class="container text-center text-white">
+      <small>Copyright &copy; Anders Strömberg</small>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

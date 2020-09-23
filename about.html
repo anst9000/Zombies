@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src='https://kit.fontawesome.com/6ad2b68ccb.js'></script>
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'
+    integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Zombies</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light" style="background-color: #F0803C;">
+    <button class="btn btn-dark" id="changeMode">Change Mode</button>
+    <i class="zombie fas fa-blind"></i>
+    <button class="btn btn-success" id="update">Update</button>
+    <h2 id="header-text">
+      Zombies
+    </h2>
+    <button class="btn btn-danger" id="reload">Reload</button>
+    <i class="zombie fas fa-blind"></i>
+    <a href="index.html" class="btn btn-info" id="about">Home</a>
+  </nav>
+
+  <div class="container mt-4 mx-auto">
+    <h2>Game Story</h2>
+    <div class="info">
+      Zombies are entering town. First there are only 1 zombie. It walks to a random house. When a zombie is visiting a
+      random house the healthy person
+      living in that house gets infected, and soon transforms into a zombie too. The next day all zombies will visit
+      other
+      houses until all healthy persons in the town has become zombies. Whoa!
+    </div>
+    <h2>Regler för programmet</h2>
+    <div class="problem">
+      <p>Det finns 100 hus i en by där det bor en person i varje hus. En dag kommer en zombie och hälsar på i ett
+        slumpmässigt utvalt hus. Efter besöket är husets ägare smittad och vi har alltså två zombies som går nästa
+        runda. Kör så många rundor som krävs tills alla husägare har blivit zombies. Zombies har inget minne av vilket
+        hus de
+        redan varit i utan kan även gå till tomma hus.</p>
+      <p>Visuellt ska det visas med enkla medel om vilka hus som är friska och infekterade under körning (kanske med
+        lite delay mellan varje runda för att man ska hinna se förändringar). Med enkel presentation menas att till
+        exempel göra 100 gröna 10px X 10px divar som blir röda när ägaren är infekterad. Programmet ska köra tio gånger
+        och presentera hur många rundor det tog innan alla blev zombies och sedan visa
+        ett snittantal för dessa rundor.</p>
+      <p>Idén till det här programmet fick jag av en kompis som sökte ett jobb på ett företag. Där hade de en
+        programmeringskoll för att
+        se på vilken nivå man befinner sig på rent programmeringsmässigt.</p>
+    </div>
+    <h2>Anders Strömberg - september 2020</h2>
+    <div class="author">
+      <p>Jag är datatekniker som söker jobb i Sundsvall. Jag älskar de flesta inriktningar inom programmering. Från
+        början tyckte jag att det var jätteroligt att bara programmera. Det har blivit många program i C++ och Python.
+        Under utbildningen gjorde vi en chatapplikation i Java som blev
+        mycket lyckad som jag och en kompis slet med en hel vår. När man kämpar med ett problem och lyckas hitta
+        lösningar som är fungerar och dessutom är bra är det en mycket
+        härligt känsla.</p>
+      <p>Jag har jobbat väligt mycket med databaser MySQL och MongoDB framför allt. Tycker dock väldigt bra om Redis,
+        PosgreSQL och har gjort flera projetk med SQLite. Till nästan alla projekt behöver man någon form av
+        datalagring.</p>
+      <p>Under sommaren 2020 efter att jag blev klar med utbildningen har jag pushat mig själv att lära mig saker hela
+        tiden. Första veckorna blev det lite trixande med COBOL som jag nu kan skriva lite enklare program i. Därefter
+        bestämde jag mig för att lära mig C# som visade sig vara ett trevligt och roligt programmeringsspråk.
+        Jag har gjort flera webbapplikationer och kombinerat det med bland annat Docker och Azure Devops. Förutom några
+        småprojekt med React och Angular så försöker jag lära mig så mycket som möjligt om CI/CD. Det är ett område som
+        inte riktigt hinns med under utbildningen.</p>
+      <p>Om ni har behov av en glad, trevlig och duktig datatekniker så tveka inte att höra av er till mig.</p>
+    </div>
+    <div class="card text-white bg-info mb-3" style="width: 18rem;">
+      <div class="card-header">
+        <h5 class="card-title">Anders Strömberg</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Bågevägen 192</p>
+        <p class="card-text">856 52 Sundsvall</p>
+        <p class="card-text">Mobil: 070 - 648 48 48</p>
+        <p class="card-text">Epost: acke@acke.site</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer id="sticky-footer" class="py-4 bg-dark">
+    <div class="container text-center text-white">
+      <small>Copyright &copy; Your Website</small>
+    </div>
+  </footer>
+
+  <!-- <script src="main.js"></script> -->
+  <script src="about.js"></script>
+</body>
+
+</html>
