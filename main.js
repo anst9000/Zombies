@@ -1,4 +1,6 @@
 const headerText = document.getElementById("header-text");
+const stickyFooter = document.getElementById("sticky-footer");
+const navbar = document.querySelector(".navbar");
 const allHouses = document.getElementsByClassName("house");
 const epidemicsText = document.getElementById("epidemics");
 const roundsPerEpidemicText = document.getElementById("rounds-per-epidemic");
@@ -124,6 +126,8 @@ $("#reload").click(function () {
 
 $("#changeMode").click(function () {
   body.classList.toggle("dark-mode");
+  stickyFooter.classList.toggle("dark-mode");
+  navbar.classList.toggle("dark-mode");
   for (let house = 0; house < allHouses.length; house++) {
     allHouses[house].classList.toggle("dark-mode");
   }

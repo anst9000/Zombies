@@ -11,6 +11,10 @@ html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
+body {
+  height: 100vw;
+}
+
 h2 {
   font-weight: 700;
   margin-top: 1em;
@@ -19,6 +23,13 @@ h2 {
 /* .container {
 
 } */
+
+.navbar {
+  background-color: #F0803C;
+}
+.navbar.dark-mode {
+  background-color: grey;
+}
 
 .zombie {
 	font-size: 3rem;
@@ -69,6 +80,14 @@ h2 {
   font-family: 'Gloria Hallelujah', cursive;
   width: 1000px;
   font-size: 1.4em;
+}
+
+footer {
+  background-color: #F0803C;
+}
+
+footer.dark-mode {
+  background-color: grey;
 }
 
 #sticky-footer {
