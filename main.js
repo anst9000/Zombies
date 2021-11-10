@@ -91,9 +91,9 @@ $("#update").click(function () {
   nrOfZombies = totalInfectedHouses + 1;
   printTotalZombies(nrOfZombies);
 
-  if (nrOfZombies < 101) {
+  if (nrOfZombies < 100) {
     buttonClicks++;
-    roundsText.textContent = "Rounds: " + buttonClicks;
+    roundsText.textContent ="Rounds: " + buttonClicks;
     console.log(buttonClicks);
   } else if (!storeRounds) {
     allAreZombies = true;
